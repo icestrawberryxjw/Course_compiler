@@ -1,6 +1,4 @@
 // Generated from miniJava.g4 by ANTLR 4.6
-package parser;
-
 import org.antlr.v4.runtime.Lexer;
 import org.antlr.v4.runtime.CharStream;
 import org.antlr.v4.runtime.Token;

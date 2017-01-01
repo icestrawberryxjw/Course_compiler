@@ -36,21 +36,20 @@ statement : '{' (statement)* '}'
 	| Identifier '[' expression ']' '=' expression ';'
 	;
 
-expression : 
-| expression ( '&&' | '<' | '+' | '-' | '*' ) expression
-| expression '[' expression ']'
-| expression '.' 'length'
-| expression '.' Identifier '(' ( expression ( ',' expression )* )? ')'
-| INTEGER_LITERAL
-| 'true'
-| 'false'
-| Identifier
-| 'this'
-| 'new' 'int' '[' expression ']'
-| 'new' Identifier '(' ')'
-| '!' expression
-| '(' expression ')' 
-;
+expression : expression ( '&&' | '<' | '+' | '-' | '*' ) expression
+    | expression '[' expression ']'
+    | expression '.' 'length'
+    | expression '.' Identifier '(' ( expression ( ',' expression )* )? ')'
+    | INTEGER_LITERAL
+	| 'true'
+	| 'false'
+	| Identifier
+	| 'this'
+	| 'new' 'int' '[' expression ']'
+	| 'new' Identifier '(' ')'
+	| '!' expression
+	| '(' expression ')' 
+	;
 
 //ID        :   [a-zA-Z_][a-zA-Z0-9_]*;
 //INT       :   '0'..'9'+ ;
